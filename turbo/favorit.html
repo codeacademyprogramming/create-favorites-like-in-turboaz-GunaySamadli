@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Favorit</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row images">
+
+        </div>
+    </div>
+    <script>
+        let image=document.querySelector(".row.images")
+        let array=JSON.parse(localStorage.getItem("image"));
+        const buttons = Array.from(document.querySelectorAll(".bi-heart"));
+        array.forEach(ad => {
+        const adHtml = `
+        <div class="col-3 first">
+                <div class="car-card">
+                    <div class="image-container">
+                        <div class="image">
+                            <img src=${ad.imageSrc}>
+                        </div>
+                        <div class="heart-icon">
+                            <i class="bi bi-heart" id=${ad.id}></i>
+                        </div>
+                        <p>${ad.price} $</p>
+                    </div>
+                    <div class="preferences">
+                        <h5>${ad.name}</h5>
+                        <div class="derinlik">
+                            <span>2018 il</span><span>-</span><span>2.0 L</span><span>-</span><span>133703 km</span>
+                        </div>
+                        <p>Baki, 21.08.2021</p>
+                    </div>
+                </div>
+            </div>
+        `
+        image.innerHTML += adHtml;
+    });
+
+    buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        let add = ads.find(ad => ad.id == button.id);
+        button.style.color = "red";
+        array[array.length-1].remove(add);
+    });
+});
+    </script>
+</body>
+</html>

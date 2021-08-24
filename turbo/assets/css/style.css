@@ -1,0 +1,92 @@
+nav {
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.car-card {
+    border: 1px solid #ddd;
+}
+
+.car-card .image-container {
+    position: relative;
+}
+
+.car-card .image-container p {
+    position: absolute;
+    top: 84%;
+    left: 0%;
+    padding: .2rem 1rem;
+    background-color: #c9171d;
+}
+
+.car-card img {
+    width: 100%;
+}
+
+.car-card .heart-icon {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+}
+
+.car-card .heart-icon i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.car-card .preferences {
+    padding: .5rem;
+}
+
+
+/* .car-card img {
+    margin-top: 50px;
+    width: 100%;
+}
+
+i {
+    color: white;
+    cursor: pointer;
+}
+
+.car-card.first i {
+    font-size: xx-large;
+    position: absolute;
+    top: 18%;
+    left: 7%;
+}
+
+.car-card.second i {
+    position: absolute;
+    top: 18%;
+    left: 30%;
+}
+
+.car-card.third i {
+    position: absolute;
+    top: 18%;
+    left: 52%;
+}
+
+.car-card.four i {
+    position: absolute;
+    top: 18%;
+    left: 74%;
+}
+
+.bi-heart-fill {
+    display: none;
+} */
